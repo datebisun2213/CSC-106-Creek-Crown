@@ -8,7 +8,7 @@
 ## 📌 Project Overview
 Creek & Crown is a high-fidelity, fully responsive 5-page fashion e-commerce interface. This project was developed to demonstrate proficiency in semantic HTML5, modern CSS3 (Flexbox/Grid, Media Queries), and vanilla JavaScript DOM manipulation.
 
-**🔗 Live Demo:** [Insert your GitHub Pages Link Here]
+**🔗 Live Demo:** [https://datebisun2213.github.io/CSC-106-Creek-Crown/]
 
 ## 🎯 Academic Requirements Fulfilled
 This project strictly adheres to the provided rubric guidelines:
