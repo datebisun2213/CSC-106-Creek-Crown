@@ -89,4 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
       responseDiv.innerText = `Thank you, ${name}. Your appointment request for ${date} has been received. Our tailors will contact you shortly.`;
     });
   }
+
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+  }
 });

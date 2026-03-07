@@ -49,6 +49,19 @@ header {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
 .brand-logo {
     color: var(--white);
     font-size: 24px;
@@ -255,4 +268,84 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #nav-menu {
+        width: 100%;
+        display: none;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #nav-menu.active {
+        display: block;
+        animation: fadeDown 0.3s ease forwards;
+    }
+
+    @keyframes fadeDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    main {
+        padding: 20px;
+    }
+    .hero {
+        height: 70vh;
+        padding: 20px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .filter-btn {
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+    .event-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .booking-form {
+        padding: 20px;
+    }
+    .marquee-bar {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
 }
